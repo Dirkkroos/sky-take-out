@@ -7,8 +7,8 @@ sky:
     username: root
     password: 123456
 
-  alioss:
-    endpoint: oss-cn-beijing.aliyuncs.com
-    access-key-id: LTAI5tPeFLzsPPT8gG3LPW64
-    access-key-secret: U6k1brOZ8gaOIXv3nXbulGTUzy6Pd7
-    bucket-name: sky-itcast
+#  alioss:
+#    endpoint: oss-cn-beijing.aliyuncs.com
+#    access-key-id: LTAI5tPeFLzsPPT8gG3LPW64
+#    access-key-secret: U6k1brOZ8gaOIXv3nXbulGTUzy6Pd7
+#    bucket-name: sky-itcast
