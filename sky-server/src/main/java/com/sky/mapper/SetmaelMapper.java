@@ -22,4 +22,6 @@ public interface SetmaelMapper {
     Setmeal selectById(Long id);
 
     void batchDelete(List<Long> ids);
+
+    void update(Setmeal setmeal);
 }

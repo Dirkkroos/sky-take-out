@@ -27,7 +27,7 @@ import java.util.Objects;
 public class SetmealServiceImpl implements SetmealService {
 
     @Autowired
-    private SetmaelMapper setmaelMapper;
+    private SetmaelMapper setmealMapper;
     @Autowired
     private SetmealDishMapper setmealDishMapper;
 
@@ -36,9 +36,9 @@ public class SetmealServiceImpl implements SetmealService {
     public void insert(SetmealDTO setmealDTO) {
         Setmeal setmeal = new Setmeal();
         BeanUtils.copyProperties(setmealDTO, setmeal);
-        setmaelMapper.insert(setmeal);
+        setmealMapper.insert(setmeal);
         List<SetmealDish> setmealDishes = setmealDTO.getSetmealDishes();
-        if(setmealDishes!=null && setmealDishes.size()>0){
+        if (setmealDishes != null && setmealDishes.size() > 0) {
             for (SetmealDish setmealDish : setmealDishes) {
                 setmealDish.setSetmealId(setmeal.getId());
             }
@@ -51,9 +51,9 @@ public class SetmealServiceImpl implements SetmealService {
 
     @Override
     public PageResult page(SetmealPageQueryDTO setmealPageQueryDTO) {
-        PageHelper.startPage(setmealPageQueryDTO.getPage(),setmealPageQueryDTO.getPageSize());
-        Page<SetmealVO> page = (Page<SetmealVO>) setmaelMapper.select(setmealPageQueryDTO);
-        return new PageResult(page.getTotal(),page.getResult());
+        PageHelper.startPage(setmealPageQueryDTO.getPage(), setmealPageQueryDTO.getPageSize());
+        Page<SetmealVO> page = (Page<SetmealVO>) setmealMapper.select(setmealPageQueryDTO);
+        return new PageResult(page.getTotal(), page.getResult());
 
     }
 
@@ -61,13 +61,57 @@ public class SetmealServiceImpl implements SetmealService {
     @Transactional
     public void delete(List<Long> ids) {
         for (Long id : ids) {
-            Setmeal setmeal = setmaelMapper.selectById(id);
-            if(Objects.equals(setmeal.getStatus(), StatusConstant.ENABLE)){
+            Setmeal setmeal = setmealMapper.selectById(id);
+            if (Objects.equals(setmeal.getStatus(), StatusConstant.ENABLE)) {
                 throw new DeletionNotAllowedException(MessageConstant.SETMEAL_ON_SALE);
             }
         }
 
-        setmaelMapper.batchDelete(ids);
+        setmealMapper.batchDelete(ids);
         setmealDishMapper.batchDeleteBySetId(ids);
     }
+
+    /**
+     * 根据id查询套餐和套餐菜品关系
+     *
+     * @param id
+     * @return
+     */
+    public SetmealVO getByIdWithDish(Long id) {
+        Setmeal setmeal = setmealMapper.selectById(id);
+        List<SetmealDish> setmealDishes = setmealDishMapper.getBySetmealId(id);
+
+        SetmealVO setmealVO = new SetmealVO();
+        BeanUtils.copyProperties(setmeal, setmealVO);
+        setmealVO.setSetmealDishes(setmealDishes);
+
+        return setmealVO;
+    }
+
+    /**
+     * 修改套餐
+     *
+     * @param setmealDTO
+     */
+    @Transactional
+    public void update(SetmealDTO setmealDTO) {
+        Setmeal setmeal = new Setmeal();
+        BeanUtils.copyProperties(setmealDTO, setmeal);
+
+        //1、修改套餐表，执行update
+        setmealMapper.update(setmeal);
+
+        //套餐id
+        Long setmealId = setmealDTO.getId();
+
+        //2、删除套餐和菜品的关联关系，操作setmeal_dish表，执行delete
+        setmealDishMapper.deleteBySetmealId(setmealId);
+        List<SetmealDish> setmealDishes = setmealDTO.getSetmealDishes();
+        setmealDishes.forEach(setmealDish -> {
+            setmealDish.setSetmealId(setmealId);
+        });
+        //3、重新插入套餐和菜品的关联关系，操作setmeal_dish表，执行insert
+        setmealDishMapper.batchInsert(setmealDishes);
+    }
+
 }
