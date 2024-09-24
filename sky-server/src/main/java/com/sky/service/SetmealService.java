@@ -5,6 +5,7 @@ import com.sky.dto.SetmealPageQueryDTO;
 import com.sky.entity.SetmealDish;
 import com.sky.result.PageResult;
 import com.sky.vo.SetmealVO;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
@@ -28,6 +29,8 @@ public interface SetmealService {
      * @param setmealDTO
      */
     void update(SetmealDTO setmealDTO);
+
+    void startOrStop(Integer status, Long id);
 
     /**
      * 根据套餐id查询套餐和菜品的关联关系
