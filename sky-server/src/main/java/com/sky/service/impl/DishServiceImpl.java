@@ -91,12 +91,45 @@ public class DishServiceImpl implements DishService {
             throw new DeletionNotAllowedException(MessageConstant.CATEGORY_BE_RELATED_BY_DISH);
         }
 
-        for (Long id : ids) {
-            dishMapper.deleteById(id);
-            dishFlavorMapper.deleteByDishId(id);
+//        for (Long id : ids) {
+//            dishMapper.deleteById(id);
+//            dishFlavorMapper.deleteByDishId(id);
+//        }
+
+        //这里可以通过foreach减少sql的数量,提高性能
+        dishMapper.deleteByIds(ids);
+        dishFlavorMapper.deleteByDishIds(ids);
+
+
+    }
+
+    @Override
+    public DishVO getDishById(Long id) {
+        Dish dish = dishMapper.getById(id);
+        DishVO dishVO = new DishVO();
+        BeanUtils.copyProperties(dish,dishVO);
+        List<DishFlavor> dishFlavors = dishFlavorMapper.getById(id);
+        dishVO.setFlavors(dishFlavors);
+        return dishVO;
+    }
+
+    @Transactional
+    @Override
+    public void updateDishWithFlavor(DishVO dishVO) {
+        Dish dish = new Dish();
+        BeanUtils.copyProperties(dishVO,dish);
+        dishMapper.update(dish);
+
+        dishFlavorMapper.deleteByDishId(dishVO.getId());
+
+        List<DishFlavor> flavors = dishVO.getFlavors();
+        if(flavors!=null && flavors.size()>0){
+            for (DishFlavor flavor : flavors) {
+                flavor.setDishId(dishVO.getId());
+            }
         }
 
-
+        dishFlavorMapper.BatchInsert(dishVO.getFlavors());
     }
 
 }

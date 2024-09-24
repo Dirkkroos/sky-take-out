@@ -19,4 +19,8 @@ public interface DishService {
 
 
     void batchDelete(List<Long> list);
+
+    DishVO getDishById(Long id);
+
+    void updateDishWithFlavor(DishVO dishVO);
 }
