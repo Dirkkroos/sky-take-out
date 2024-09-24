@@ -11,6 +11,13 @@
                 #{createUser}, #{updateUser})
     </insert>
 
+    <delete id="batchDelete">
+        delete from setmeal where id in
+        <foreach collection="ids" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </delete>
+
 
     <select id="select" resultType="com.sky.vo.SetmealVO">
         select

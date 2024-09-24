@@ -11,6 +11,13 @@
         </foreach>
     </insert>
 
+    <delete id="batchDeleteBySetId">
+        delete from sky_take_out.setmeal_dish where setmeal_id in
+        <foreach collection="ids" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </delete>
+
 
     <select id="getByIds" resultType="java.lang.Long">
         select setmeal_id from sky_take_out.setmeal_dish where dish_id in
