@@ -170,4 +170,12 @@ public class DishServiceImpl implements DishService {
         return dishVOList;
     }
 
+    @Override
+    public void stopOrOn(Long id, int status) {
+        Dish dish = dishMapper.getById(id);
+        dish.setStatus(status);
+        dishMapper.update(dish);
+    }
+
+
 }
