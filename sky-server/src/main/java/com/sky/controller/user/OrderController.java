@@ -42,7 +42,7 @@ public class OrderController {
      * @param ordersPaymentDTO
      * @return
      */
-    /*@PutMapping("/payment")
+    @PutMapping("/payment")
     @ApiOperation("订单支付")
     public Result<OrderPaymentVO> payment(@RequestBody OrdersPaymentDTO ordersPaymentDTO) throws Exception {
         log.info("订单支付：{}", ordersPaymentDTO);
@@ -50,7 +50,7 @@ public class OrderController {
         log.info("生成预支付交易单：{}", orderPaymentVO);
         return Result.success(orderPaymentVO);
     }
-
+/*
     *//**
      * 历史订单查询
      *

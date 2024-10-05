@@ -14,20 +14,20 @@ public interface OrderService {
      * @return
      */
     OrderSubmitVO submitOrder(OrdersSubmitDTO ordersSubmitDTO);
-/*
-    *//**
+
+    /**
      * 订单支付
      * @param ordersPaymentDTO
      * @return
-     *//*
+     */
     OrderPaymentVO payment(OrdersPaymentDTO ordersPaymentDTO) throws Exception;
 
-    *//**
+    /**
      * 支付成功，修改订单状态
      * @param outTradeNo
-     *//*
+     */
     void paySuccess(String outTradeNo);
-
+/*
     *//**
      * 用户端订单分页查询
      * @param page
