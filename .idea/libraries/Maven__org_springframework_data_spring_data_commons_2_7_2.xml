@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Maven: org.springframework.data:spring-data-commons:2.7.2" type="java-imported" external-system-id="Maven">
+    <properties groupId="org.springframework.data" artifactId="spring-data-commons" version="2.7.2" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../../../develop/apache-maven-3.6.1/mvn_repo/org/springframework/data/spring-data-commons/2.7.2/spring-data-commons-2.7.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../../../../develop/apache-maven-3.6.1/mvn_repo/org/springframework/data/spring-data-commons/2.7.2/spring-data-commons-2.7.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../../../develop/apache-maven-3.6.1/mvn_repo/org/springframework/data/spring-data-commons/2.7.2/spring-data-commons-2.7.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Maven: com.aliyun.oss:aliyun-sdk-oss:3.10.2" type="java-imported" external-system-id="Maven">
+    <properties groupId="com.aliyun.oss" artifactId="aliyun-sdk-oss" version="3.10.2" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../../../develop/apache-maven-3.6.1/mvn_repo/com/aliyun/oss/aliyun-sdk-oss/3.10.2/aliyun-sdk-oss-3.10.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../../../../develop/apache-maven-3.6.1/mvn_repo/com/aliyun/oss/aliyun-sdk-oss/3.10.2/aliyun-sdk-oss-3.10.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../../../develop/apache-maven-3.6.1/mvn_repo/com/aliyun/oss/aliyun-sdk-oss/3.10.2/aliyun-sdk-oss-3.10.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

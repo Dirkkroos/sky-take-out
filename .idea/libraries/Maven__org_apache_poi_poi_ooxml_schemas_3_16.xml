@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.poi:poi-ooxml-schemas:3.16" type="java-imported" external-system-id="Maven">
+    <properties groupId="org.apache.poi" artifactId="poi-ooxml-schemas" version="3.16" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../../../develop/apache-maven-3.6.1/mvn_repo/org/apache/poi/poi-ooxml-schemas/3.16/poi-ooxml-schemas-3.16.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../../../../develop/apache-maven-3.6.1/mvn_repo/org/apache/poi/poi-ooxml-schemas/3.16/poi-ooxml-schemas-3.16-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../../../develop/apache-maven-3.6.1/mvn_repo/org/apache/poi/poi-ooxml-schemas/3.16/poi-ooxml-schemas-3.16-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

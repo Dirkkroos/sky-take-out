@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Maven: com.github.xiaoymin:knife4j-spring-boot-starter:3.0.2" type="java-imported" external-system-id="Maven">
+    <properties groupId="com.github.xiaoymin" artifactId="knife4j-spring-boot-starter" version="3.0.2" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../../../develop/apache-maven-3.6.1/mvn_repo/com/github/xiaoymin/knife4j-spring-boot-starter/3.0.2/knife4j-spring-boot-starter-3.0.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../../../../develop/apache-maven-3.6.1/mvn_repo/com/github/xiaoymin/knife4j-spring-boot-starter/3.0.2/knife4j-spring-boot-starter-3.0.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../../../develop/apache-maven-3.6.1/mvn_repo/com/github/xiaoymin/knife4j-spring-boot-starter/3.0.2/knife4j-spring-boot-starter-3.0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

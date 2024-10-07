@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Maven: io.github.classgraph:classgraph:4.8.83" type="java-imported" external-system-id="Maven">
+    <properties groupId="io.github.classgraph" artifactId="classgraph" version="4.8.83" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../../../develop/apache-maven-3.6.1/mvn_repo/io/github/classgraph/classgraph/4.8.83/classgraph-4.8.83.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../../../../develop/apache-maven-3.6.1/mvn_repo/io/github/classgraph/classgraph/4.8.83/classgraph-4.8.83-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../../../develop/apache-maven-3.6.1/mvn_repo/io/github/classgraph/classgraph/4.8.83/classgraph-4.8.83-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

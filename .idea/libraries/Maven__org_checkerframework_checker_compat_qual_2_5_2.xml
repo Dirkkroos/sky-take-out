@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Maven: org.checkerframework:checker-compat-qual:2.5.2" type="java-imported" external-system-id="Maven">
+    <properties groupId="org.checkerframework" artifactId="checker-compat-qual" version="2.5.2" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../../../develop/apache-maven-3.6.1/mvn_repo/org/checkerframework/checker-compat-qual/2.5.2/checker-compat-qual-2.5.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../../../../develop/apache-maven-3.6.1/mvn_repo/org/checkerframework/checker-compat-qual/2.5.2/checker-compat-qual-2.5.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../../../develop/apache-maven-3.6.1/mvn_repo/org/checkerframework/checker-compat-qual/2.5.2/checker-compat-qual-2.5.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
